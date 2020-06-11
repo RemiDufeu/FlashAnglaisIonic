@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color='primary' >
+      
+        <ion-back-button class = "paddingbot10px"color='light' defaultHref='/home' slot='start'></ion-back-button>
+        <ion-title class = "paddingbot5px" id="title">Mon lexique </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+  <ion-searchbar
+  showcancelbutton=""
+    (ionInput)="filterList($event)">
+  </ion-searchbar>
+  
+  <ion-list>
+  <ion-card *ngFor="let fich of fiches">
+    <ion-item>
+      <h1 >  {{fich.frw}} </h1>
+    </ion-item>
+  
+    <ion-card-content>
+      <h2 > {{fich.engw}}  </h2>
+    </ion-card-content>
+  </ion-card>
+
+</ion-list>
+
+</ion-content>

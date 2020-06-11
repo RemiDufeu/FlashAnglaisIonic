@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color='primary' > 
+        <ion-back-button id="backb" color='light' defaultHref='/home' slot='start'></ion-back-button>
+        <ion-title id="title">Objectif</ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+    <p>Combien de mots souhaitez-vous réviser par jour ? Le nombre doit être le plus proche possible de la réalité. De plus nous vous recommandons de réviser un nombre de mots fixe chaque jour.</p>
+    <ion-label>Nombre de mots :</ion-label>
+    <ion-range min="1" max="200" step="1" pin="true" [(ngModel)]="motsparjour">
+    </ion-range>
+    <div class="boutonsdroite">
+    <ion-button (click)="putmotsparjour()" shape="round">suivant<ion-icon slot="end" name="chevron-forward-outline"></ion-icon></ion-button>
+    </div>
+  </ion-card>
+</ion-content>

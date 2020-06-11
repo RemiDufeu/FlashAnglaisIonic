@@ -1,0 +1,103 @@
+#container {
+  
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8%;
+
+}
+ion-grid {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.paddingbot5px {
+  padding-bottom: 5px;
+}
+
+#title {
+  font-size: 26px;
+  text-align: left;
+  position: relative;
+  padding-left: 50px;
+}
+#text-align {
+  text-align: center;
+}
+#themelist {
+  text-transform: to-upper-case($string: "uppercase");
+  margin-bottom: 0px;
+  margin-top: 12px;
+}
+#boutonl {
+  margin-top: 10px;
+}
+#backgroundl {
+  background-color: gray;
+}
+#textalignright {
+  text-align: end;
+}
+#pourcentage {
+  text-align: center;
+  font-size: 32px;
+  line-height: 27px;
+  position: relative;
+  top: -50px;
+}
+#contenair2 {
+  padding-left: 1em;
+  padding-right: 1em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35%;
+  text-align: center;
+
+
+}
+#rond {
+  padding: 1em;
+  width: 100%;
+  
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+.buttonc {
+  height: 4em;
+  --border-width: 5px;
+}
+h6 {
+  color: grey;
+  text-align: right;
+}
+h2 {
+  margin: 1em;
+  
+}
+h1 {
+  text-align: left;
+  position: relative;
+  left: 7%;
+}
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}

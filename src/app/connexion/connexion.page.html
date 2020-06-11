@@ -1,0 +1,26 @@
+
+
+
+<ion-content>
+  
+<div id="container">
+
+<ion-item>
+  <ion-label position="floating">E-mail</ion-label>
+  <ion-input color="primary" type="email" autocomplete="on" inputmode="email" spellcheck=false autocomplete="on" placeholder="saisissez l'email" [(ngModel)]="user.email"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Mot de passe</ion-label>
+  <ion-input color="primary" type="password" inputmode="password" min=6 placeholder="saisissez le mot de passe" [(ngModel)]="user.password"></ion-input>
+</ion-item>
+
+<div id="mdpoublie"><ion-label  color='primary' routerLink="/mdpoublie" ><U>Mot de passe oublié ?</U></ion-label></div>
+<br>
+<ion-label color='danger'> {{a}}</ion-label>
+<br>
+<br>
+<ion-button expand="block" fill="outline" (click)="login()">Se connecter <ion-icon color="primary"name="chevron-forward-outline"></ion-icon></ion-button>
+<ion-button expand="block" routerLink="/creercompte">Créer un compte</ion-button>
+</div>
+</ion-content>

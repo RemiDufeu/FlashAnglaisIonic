@@ -1,0 +1,56 @@
+<ion-header >
+  <ion-toolbar color='primary' > 
+        <ion-back-button class = "paddingbot5px" color='light' defaultHref='/home' slot='start'></ion-back-button>
+        <ion-title  class = "paddingbot5px" id="title">{{theme}} </ion-title>  
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content *ngIf="ojectifaccompli">
+
+  
+
+  <ion-card>
+    <ion-item>
+      <h1 > {{lexique[0].en}}  </h1>
+    </ion-item>
+  
+    <ion-card-content>
+      <h2 *ngIf="!hide"> {{lexique[0].fr}} </h2>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</ion-content>
+
+<ion-content *ngIf="!ojectifaccompli"t>
+<ion-card >
+  <p>Félicitaions vous avez atteint votre objectif quotidien !</p>
+  <div class="boutonsdroite">
+    <ion-button (click)=continuezserie() color='success'> Continuez vos révisions<ion-icon slot="end" name="chevron-forward-outline"></ion-icon> </ion-button>
+  </div>
+</ion-card>
+</ion-content>
+
+<ion-grid id="boutonsbas" *ngIf="ojectifaccompli" >
+  <ion-row *ngIf="!hide">
+    <ion-col>
+      <ion-button class="basb" expand="full" color="success" (click)="ngIfCtrl()" (click)="ficheVrai()">VRAI</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="basb" expand="full" color="danger" (click)="ngIfCtrl()" (click)="ficheFaux ()">FAUX</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid *ngIf="ojectifaccompli" id="boutonsbas" >
+  <ion-row *ngIf="hide">
+    <ion-col>
+      <ion-button class="basb" expand="full" color="primary"(click)="ngIfCtrl()" > AFFICHER LA SOLUTION</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+ 

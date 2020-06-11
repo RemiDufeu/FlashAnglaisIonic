@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color='primary' >
+  
+        <ion-title class = "paddingbot5px" id="title">Fishy Anglais</ion-title>
+        <ion-menu-button class = "paddingbot5px" color='light' slot="end"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   
+
+  <div id="container">
+    <h6>ma progression : {{homeCompteur}}/{{motsparjour}}</h6>
+    <ion-progress-bar value={{compteurjour}} ></ion-progress-bar> 
+    
+    <br>
+    
+    <ion-list>
+        
+        <div  *ngFor="let fich of fiches"  class="iteml" >
+            <ion-grid id="backgroundl">
+              <ion-row>
+                <ion-col>
+                  <h4 id="themelist">  {{fich.theme}} </h4>
+                </ion-col>
+                <ion-col id="textalignright">
+                  <ion-button id="boutonl" (click)="onClickDetails(fich)"><ion-icon  name="chevron-forward-sharp"></ion-icon></ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row><ion-progress-bar class="progressionl" value={{fich.lvl}}></ion-progress-bar></ion-row>
+            </ion-grid>
+            <br>
+        </div>
+        
+    </ion-list>
+    <br>
+    <ion-button class="buttonc" color='primary' expand='full' fill='outline' routerLink='/lexique' ><h2> Mon lexique </h2> </ion-button>
+  </div>
+  
+ 
+
+  
+
+</ion-content>

@@ -1,0 +1,29 @@
+
+<ion-content>
+<ion-button (click)='test()'> push fiches</ion-button>
+<ion-card *ngIf= "diapo1">
+  <p>Bonjour et bienvenue sur fishy anglais ! </p>
+  <div class="boutonsdroite">
+  <ion-button (click)="btndiapo1()" shape="round">suivant<ion-icon slot="end" name="chevron-forward-outline"></ion-icon></ion-button>
+  </div>
+</ion-card>
+
+<ion-card *ngIf= "diapo2">
+  <p>Combien de mots souhaitez-vous réviser par jour ? Le nombre doit être le plus proche possible de la réalité. De plus nous vous recommandons de réviser un nombre de mots fixe chaque jour.</p>
+  <ion-label>Nombre de mots :</ion-label>
+  <ion-range min="1" max="200" step="1" pin="true" [(ngModel)]="motsparjour">
+  </ion-range>
+  <div class="boutonsdroite">
+  <ion-button  (click)="btndiapo2()" shape="round">suivant<ion-icon slot="end" name="chevron-forward-outline"></ion-icon></ion-button>
+  </div>
+</ion-card> 
+
+<ion-card *ngIf= "diapo3">
+  <p>Bien nous pouvons maintenant commencer votre apprentissage. Vous allez maintenant être redirigé vers votre page de suivi. Cette page vour permet d'accéde à vos flashcards et de consulter à votre progression. Bonne apprentissage !</p>
+  <div class="boutonsdroite">
+  <ion-button routerLink="/home" shape="round">commencer<ion-icon slot="end" name="chevron-forward-outline"></ion-icon></ion-button>
+  </div>
+</ion-card>
+
+
+</ion-content>
